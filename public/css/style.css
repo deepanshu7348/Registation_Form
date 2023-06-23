@@ -1,0 +1,48 @@
+body{
+    background-color: #E8ECEF;
+}
+
+.centered{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.secret-text {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: black;
+}
+.container {
+    margin-top: 100px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+i{
+    font-size: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
