@@ -1,3 +1,5 @@
+const dotenv = require("dotenv")
+dotenv.config()
 const express = require('express');
 const bodyparser = require('body-parser');
 const encrypt = require('mongoose-encryption');
@@ -61,47 +63,9 @@ app.post("/login", function(req,res){
 });
 
 app.post("/submit",function(){
-    // const newData = new item({
-    //     textdata: req.body.textdata 
-    // });
-    // newData.save().then(()=>{
-    //     res.render("submit"); 
-    // }).catch((err)=>{
-    //     console.log(err);
-    // })
-    const textdata = req.body.textdata
-    item.findOne({email:username})
-        .then((foundUser)=>{
-            if(foundUser){
-                if(foundUser.password == password){
-                    res.render("submit");
-                }
-            }
-        })
-        .catch((err)=>{
-            console.log(err);
-
-        });
+    
 });
 
-
-
-// app.post("/login", function(req,res){
-//     const username = req.body.username;
-//     const password = req.body.password;
-//     item.findOne({email:username},function(err,foundUser){
-//         if(err){
-//             console.log(err);
-//         }
-//         else{
-//             if(foundUser){
-//                 if(foundUser.password == password){
-//                     res.render("secrets");
-//                 }
-//             }
-//         }
-//     });
-// });
 
 
 app.get("/login",function(req,res){
